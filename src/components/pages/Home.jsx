@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import Savings from "../../imgs/savings.svg";
+import { LinkButton, RotaLinkButton } from "../container/LinkButton";
 
 export function Home() {
   return (
@@ -8,7 +9,9 @@ export function Home() {
         Bem-vindo ao <span>Costs</span>
       </h1>
       <p>Comece a gerenciar os seus projetos agora mesmo! </p>
-      <CriarButton>Criar Projeto</CriarButton>
+      <LinkButton>
+        <RotaLinkButton to="/newproject/" text="Criar Projeto"></RotaLinkButton>
+      </LinkButton>
       <img src={Savings} alt="Costs" />
     </HomeStyles>
   );
@@ -44,11 +47,4 @@ const HomeStyles = styled.div`
     width: 350px;
     margin: 2em;
   }
-`;
-const CriarButton = styled.button`
-  border: none;
-  background-color: #ffbb33;
-  padding: 10px 18px 10px 18px;
-  border-radius: 4px;
-  font-size: 15px;
 `;

@@ -18,7 +18,7 @@ const FooterStyle = styled.div`
     text-align: center;
   }
 
-  > ul:hover {
+  > ul li:hover {
     color: #ffbb33;
   }
 

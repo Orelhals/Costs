@@ -1,7 +1,6 @@
 import styled from "styled-components";
 
 const MainStyle = styled.div`
-  background-color: #efe9ef;
   width: 90vw;
   height: 100vh;
   display: flex;
