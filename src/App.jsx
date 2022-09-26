@@ -1,13 +1,13 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { Home } from "./components/pages/Home";
-import { Contact } from "./components/pages/Contact";
-import { Company } from "./components/pages/Company";
-import { NewProject } from "./components/pages/NewProject";
-import { Navbar } from "./components/container/Navbar";
-import { Footer } from "./components/container/Footer";
-import { Projects } from "./components/pages/Projects";
 
-import MainStyle from "./styles/MainStyle";
+// pages
+import { Home } from "./pages/Home";
+import { Streamers } from "./pages/Streamers";
+import { MirasTroll } from "./pages/MirasTroll";
+
+// components
+import { Header, Footer } from "./components";
+
 import { GlobalStyles } from "./styles/Global";
 
 export const App = () => {
@@ -15,16 +15,12 @@ export const App = () => {
   return (
     <BrowserRouter>
       <GlobalStyles />
-      <Navbar />
-      <MainStyle>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/company" element={<Company />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="/projects" element={<Projects />} />
-          <Route path="/newproject" element={<NewProject />} />
-        </Routes>
-      </MainStyle>
+      <Header />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/streamers" element={<Streamers />} />
+        <Route path="/mirastroll" element={<MirasTroll />} />
+      </Routes>
       <Footer />
     </BrowserRouter>
   );
